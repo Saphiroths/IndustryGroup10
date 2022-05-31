@@ -5,7 +5,7 @@ public class ManualBehavior : MonoBehaviour
 {
     private RectTransform rectTransform;
     Vector2 originalPosition;
-    Vector2 openPosition = new Vector2(435, 0);
+    Vector2 openPosition = new Vector2(770, 0);
 
     public ManualTextHandler textHandler;
 
