@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Demo/DemoScene.unity
+    guid: 7d6eda91522120a47b2d6daa5d66ed11
+  - enabled: 1
+    path: Assets/Drag&Drop minigame/Drag&Drop.unity
+    guid: e470afe3237ad9749b930b2c00eb2ff2
   m_configObjects: {}
