@@ -651,6 +651,8 @@ MonoBehaviour:
   correctAnswer: 
   maxLines: 5
   sizeOfPreviousFields: 0
+  lines: 0
+  size: 0
   input: {fileID: 3442790133843784890}
   inputField: {fileID: 3442790133785403671}
 --- !u!1 &3442790133843784892
