@@ -21,7 +21,7 @@ pages:
       - type: tiles
         version: 0.20.5
         parameters:
-          text: "fucking kill me"
+          text: "hello"
           asset: https://appsemble.app/api/apps/321/assets/d47e0ec3-ced2-4230-988b-5fa7b136e2f6
   - name: Example Page B
     blocks:
