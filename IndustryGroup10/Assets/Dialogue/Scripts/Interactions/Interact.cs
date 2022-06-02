@@ -8,8 +8,8 @@ public class Interact : MonoBehaviour
     public GameObject interactTarget;
     [SerializeField] public GameObject dialogueGameobject;
 
-       
-    public void StartDialogue() {
+
+    public void OnMouseDown() { 
 
         dialogueGameobject.SetActive(false);
 

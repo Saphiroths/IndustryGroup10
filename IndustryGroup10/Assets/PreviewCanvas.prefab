@@ -84,11 +84,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3983360640576764058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e81a24c9d32d1146abfb465306b8f55, type: 3}
+  m_Script: {fileID: 11500000, guid: ad21e63d57ca6414bbb6031cfddfd90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwcHNlbWJsZS5hcHAiLCJpYXQiOjE2NTM0NzY4NzUsImlzcyI6Imh0dHBzOi8vYXBwc2VtYmxlLmFwcCIsInN1YiI6ImNmZTZmNDMzLWI2M2ItNGQ0Yy04ZDcwLTFiZWQwMDQwYjBiOSIsImV4cCI6MTY1MzQ4MDQ3NX0.yIifm_0TUXrpddcw3MHHkmZmZLVvVWATY0K65Hg0bJY
-  loadingTexture: {fileID: 2800000, guid: a5cc93f320dc9064ba935d1d442590c6, type: 3}
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwcHNlbWJsZS5hcHAiLCJpYXQiOjE2NTM0ODA0MTQsImlzcyI6Imh0dHBzOi8vYXBwc2VtYmxlLmFwcCIsInN1YiI6ImNmZTZmNDMzLWI2M2ItNGQ0Yy04ZDcwLTFiZWQwMDQwYjBiOSIsImV4cCI6MTY1MzQ4NDAxNH0.8Ukokk89KFxQE-yd9dh1wfU_CCxj7VlwEhkKkvHV4Y0
+  loadingTexture: {fileID: 0}
 --- !u!1 &4999467537664254629
 GameObject:
   m_ObjectHideFlags: 0

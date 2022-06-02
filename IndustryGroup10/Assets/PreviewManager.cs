@@ -21,7 +21,7 @@ public class PreviewManager : MonoBehaviour
     {
         image = GetComponentInChildren<RawImage>();
         image.color = new Color(1, 1, 1);
-        loadingTexture.enabled = false;
+        //loadingTexture.enabled = false;
         StartCoroutine(RefreshPreview(uri));
         /*StartCoroutine(PatchCode(
             @"name: aaaa
