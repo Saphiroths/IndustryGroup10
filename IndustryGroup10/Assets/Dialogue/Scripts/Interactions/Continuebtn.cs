@@ -11,9 +11,6 @@ public class Continuebtn : MonoBehaviour
     public GameObject npc;
     private int count;
   
-
-
-
     /* void Start()
      {
          dialog = interactTarget.GetComponent<NpcDialogue>();

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Drag&Drop minigame/Drag&Drop.unity
     guid: e470afe3237ad9749b930b2c00eb2ff2
+  - enabled: 1
+    path: Assets/Scenes/Level 1 - Code Editor.unity
+    guid: a61065d18c8d4f64d8a6f6ba8e880503
   m_configObjects: {}

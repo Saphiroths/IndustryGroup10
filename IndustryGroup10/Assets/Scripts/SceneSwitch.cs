@@ -9,6 +9,7 @@ public class SceneSwitch : MonoBehaviour
     public void SwitchScene()
     {
         SceneManager.LoadScene(sceneNumber);
+        Debug.Log(sceneNumber);
     }
     
         
