@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380505228079881670, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -239.21
+      value: -239.21002
       objectReference: {fileID: 0}
     - target: {fileID: 5380505228127539384, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_IsActive
@@ -346,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 3863672219456933544, guid: b0f5dfc0522f17047a04466b506a36ce, type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: dcf452df5c159e046b5afa7978006e52, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4309555270068797739, guid: b0f5dfc0522f17047a04466b506a36ce, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
