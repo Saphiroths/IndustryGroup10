@@ -131,6 +131,43 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5380505227004962387, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: infoStrings.Array.data[0]
+      value: Assets can be used to store binary data. Typically this is used for
+        example for images, videos, audio fragments, or documents. They can be used
+        by app creators, content managers who use Appsemble Studio, and end users
+        of the app.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227004962387, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: subjectStrings.Array.data[0]
+      value: Video
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419594, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1284.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419594, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 262.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419594, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419594, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 448
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419595, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_text
+      value: "Assets consist of binary data, an auto-generated ID, and optionally
+        a name. The asset can be referenced in the API by its ID or name. The name
+        must be unique within the app. Assets can\u2019t be changed. In order to
+        change them, they need to be deleted and uploaded again.\r\n\r\nAssets can
+        typically be used for 2 use cases:\r\n\r\n    To link binary data to a resource.\r\n   
+        To store static app assets that can be referenced in the app definition or
+        custom CSS.\r\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 5380505227872975536, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -230,6 +267,26 @@ PrefabInstance:
     - target: {fileID: 5380505227872975551, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228008711574, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228079881670, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1238.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228079881670, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -239.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228127539384, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228315016282, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

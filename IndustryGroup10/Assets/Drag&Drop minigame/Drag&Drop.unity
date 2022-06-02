@@ -549,6 +549,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5380505227004962387, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: infoStrings.Array.data[0]
+      value: "Each app has a name, description, and a default page. Notice the name
+        and description have the value that was entered in the \u201CCreate app\u201D
+        dialog."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227004962387, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: subjectStrings.Array.data[0]
+      value: Basics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419594, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505227790419595, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_text
+      value: Resources exist for use it in the app. A simple way to display data
+        is to add a table block. The table block can display data in an orderly manner
+        in a table.
+      objectReference: {fileID: 0}
     - target: {fileID: 5380505227872975536, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -652,6 +672,18 @@ PrefabInstance:
     - target: {fileID: 5380505227872975551, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
       propertyPath: m_SortingLayerID
       value: 1927934745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228008711574, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228127539384, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380505228315016282, guid: 881f2a7910109ea4db6507e18337a80a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
