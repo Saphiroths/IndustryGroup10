@@ -558,6 +558,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 763697881}
     m_Modifications:
+    - target: {fileID: 4363877165235792998, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: dialogueGameobject
+      value: 
+      objectReference: {fileID: 1782818853}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1795573724}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Cancelbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CancelButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6216858483422210626, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -736,6 +752,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.380829, y: 2.7471209}
   m_EdgeRadius: 0
+--- !u!114 &606542834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4363877165235792998, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+  m_PrefabInstance: {fileID: 1632993453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4d0b6ff9732c2438f042d7c6f1a1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705450739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,6 +2457,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 940061852}
     m_Modifications:
+    - target: {fileID: 4363877165235792998, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: dialogueGameobject
+      value: 
+      objectReference: {fileID: 394113813}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 606542834}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CancelInvoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116398649964730513, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.MonoBehaviour, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6216858483422210626, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -2797,6 +2844,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6216858483836825165, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
   m_PrefabInstance: {fileID: 568157585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1795573724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4363877165235792998, guid: 870a27bd3d44cf04084e487bf1286642, type: 3}
+  m_PrefabInstance: {fileID: 568157585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4d0b6ff9732c2438f042d7c6f1a1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1845366939
 GameObject:
   m_ObjectHideFlags: 0
