@@ -19,7 +19,7 @@ public class bobbing : MonoBehaviour
     {
         robTransform = GetComponent<Transform>();
         midPosition = robTransform.position;
-        upPosition = midPosition + new Vector2(0, 0.2f);
+        upPosition = midPosition + new Vector2(0, 0.1f);
 
     }
 
