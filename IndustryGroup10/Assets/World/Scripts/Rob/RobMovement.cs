@@ -10,45 +10,62 @@ public class RobMovement : MonoBehaviour
 
     private Transform robTransform;
     Vector2 originalPosition;
-    Vector2 currentPosition;
     Vector2 midPosition;
     Vector2 upPosition;
     Vector2 robLocationToPlayer;
-    Vector2 animationStartPosition;
     bool inAnimation = false;
 
     float animationTime = 2f;
     float currentTime = 0;
     float normalizedValue;
 
-    // Start is called before the first frame update
+    List<Vector2> positionHistory = new List<Vector2>();
+
+    public bool robInChase = false;
+
     void Start()
     {
         playerTransform = playerObject.GetComponent<Transform>();
         robTransform = GetComponent<Transform>();
         originalPosition = robTransform.position;
         upPosition = originalPosition + new Vector2(0, 0.2f);
+        playerPosition = playerTransform.position;
+        positionHistory.Insert(0, playerPosition);
+        robLocationToPlayer = new Vector2(playerPosition.x - 1.5f, playerPosition.y + 2);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         playerPosition = playerTransform.position;
-        robLocationToPlayer = new Vector2(playerPosition.x - 1.5f, playerPosition.y + 2);
-        currentPosition = robTransform.position;
-        if (inAnimation == false)
+
+        if(positionHistory[0] != playerPosition)
         {
-            animationStartPosition = currentPosition;
+            positionHistory.Insert(0, playerPosition);
+        }
+
+        if(positionHistory.Count >= 30)
+        {
+            robInChase = true;
+
+        }
+        if(robInChase == true)
+        {       
+            robLocationToPlayer = positionHistory[positionHistory.Count - 1];
+            positionHistory.RemoveAt(positionHistory.Count - 1);
+            if(positionHistory.Count < 10)
+            {
+                robInChase = false;
+            }
         }
 
         midPosition = new Vector2(robLocationToPlayer.x, robLocationToPlayer.y);
-        upPosition = new Vector2(robLocationToPlayer.x, robLocationToPlayer.y + 0.2f);
+        upPosition = new Vector2(robLocationToPlayer.x, robLocationToPlayer.y + 0.6f);
 
         if (inAnimation == false)
         {
             currentTime = 0;                                    //Reset animation timer
-            IEnumerator openCoroutine = RobBobbing();           //Index coroutine containing the opening animation
-            StartCoroutine(openCoroutine);                      //Starts the coroutine
+            IEnumerator bobbingCoroutine = RobBobbing();           //Index coroutine containing the opening animation
+            StartCoroutine(bobbingCoroutine);                      //Starts the coroutine
         }
     }
 
