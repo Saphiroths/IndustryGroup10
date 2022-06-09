@@ -47,11 +47,12 @@ public class YAMLGenerator : MonoBehaviour
                     if (uneditableTextboxesGenerated != numberOfUneditableTextboxes)
                     {
                         GameObject UneditableBox = Instantiate(UneditableTextboxPrefab, transform);
-                        UneditableBox.GetComponent<TextMeshProUGUI>().text = splitCodeText[editableTextboxesGenerated + uneditableTextboxesGenerated];
+                        UneditableBox.GetComponent<TMP_InputField>().text = splitCodeText[editableTextboxesGenerated + uneditableTextboxesGenerated];
 
-                        int lines = UneditableBox.GetComponent<TextMeshProUGUI>().text.Split("\n").Length;
+                        int lines = UneditableBox.GetComponent<TMP_InputField>().text.Split("\n").Length;
+                        UneditableBox.GetComponent<CodeGenerator>().lines = lines;
                         UneditableBox.GetComponent<CodeGenerator>().sizeOfPreviousFields = sizeOfPreviousFields;
-                        sizeOfPreviousFields += 19 * lines;
+                        sizeOfPreviousFields += 23 * lines;
                         uneditableTextboxesGenerated++;
                     }
 
@@ -62,8 +63,7 @@ public class YAMLGenerator : MonoBehaviour
                         int lines = splitCodeText[editableTextboxesGenerated + uneditableTextboxesGenerated].Split("\n").Length;
                         input.lines = lines;
                         input.sizeOfPreviousFields = sizeOfPreviousFields;
-
-                        sizeOfPreviousFields += 19 * lines;
+                        sizeOfPreviousFields += 23 * lines;
 
                         editableTextboxesGenerated++;
                     }

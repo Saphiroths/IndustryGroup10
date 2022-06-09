@@ -1,0 +1,29 @@
+name: Granny's Cookie Store
+description: Order cookies from Granny's Store
+defaultPage: Order Form
+
+resources:
+  order:
+    roles:
+      - $public
+    schema:
+      type: object
+      additionalProperties: false
+      required:
+//switch
+        - customerName
+        - typeOfCookies
+//switch
+        - amountOfCookies
+      properties:
+        customerName:
+          type: string
+        typeOfCookies:
+//switch
+          type: string
+        amountOfCookies:
+          type: number
+//switch
+        extraNotes:
+//switch
+          type: string

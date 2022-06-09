@@ -221,9 +221,9 @@ GameObject:
   - component: {fileID: 3099569953679837929}
   - component: {fileID: 3099569953679837930}
   - component: {fileID: 3099569953679837931}
-  - component: {fileID: 3099569953679837928}
+  - component: {fileID: 1544290732726036221}
   m_Layer: 5
-  m_Name: Player Input
+  m_Name: YAML Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3099569953679837930}
   m_TextViewport: {fileID: 3099569953365018264}
   m_TextComponent: {fileID: 3099569953687887686}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
---- !u!114 &3099569953679837928
+--- !u!114 &1544290732726036221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,16 +395,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3099569953679837845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7821e8c6ed5232043bde476b9b1a9fb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5339d77477f60c140ad92b7a0a65fc29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctAnswer: 
-  maxLines: 5
   sizeOfPreviousFields: 0
   lines: 0
-  size: 0
-  input: {fileID: 3099569953687887686}
-  inputField: {fileID: 3099569953679837931}
+  text: {fileID: 0}
 --- !u!1 &3099569953687887680
 GameObject:
   m_ObjectHideFlags: 0

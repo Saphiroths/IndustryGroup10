@@ -7,8 +7,7 @@ public class PlayerYAMLInput : MonoBehaviour
 {
     [SerializeField] string correctAnswer;
     [SerializeField] int maxLines;
-    private float firstLineSize = 30;
-    private float lineSize = 19;
+    private float lineSize = 23;
     public float sizeOfPreviousFields = 0;
     public int lines;
     public int size;
