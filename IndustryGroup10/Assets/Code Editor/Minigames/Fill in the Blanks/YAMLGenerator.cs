@@ -21,7 +21,7 @@ public class YAMLGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TextAsset text = Resources.Load($"Level Code/Level {Level}/YAMLLevel{Level}", typeof(TextAsset)) as TextAsset;
+        TextAsset text = Resources.Load($"Level Code/YAMLLevel{Level}", typeof(TextAsset)) as TextAsset;
         splitCodeText = text.text.Split("//switch");
         totalBoxes = numberOfEditableTextboxes + numberOfUneditableTextboxes;
 
@@ -76,14 +76,27 @@ public class YAMLGenerator : MonoBehaviour
                 {
                     if (editableTextboxesGenerated != numberOfEditableTextboxes)
                     {
-                        Instantiate(EditableTextboxPrefab, transform);
+                        GameObject EditableBox = Instantiate(EditableTextboxPrefab, transform);
+                        PlayerYAMLInput input = EditableBox.GetComponent<PlayerYAMLInput>();
+                        int lines = splitCodeText[editableTextboxesGenerated + uneditableTextboxesGenerated].Split("\n").Length;
+                        input.lines = lines;
+                        input.sizeOfPreviousFields = sizeOfPreviousFields;
+                        sizeOfPreviousFields += 23 * lines;
+
                         editableTextboxesGenerated++;
                     }
                     if (uneditableTextboxesGenerated != numberOfUneditableTextboxes)
                     {
-                        Instantiate(UneditableTextboxPrefab, transform);
+                        GameObject UneditableBox = Instantiate(UneditableTextboxPrefab, transform);
+                        UneditableBox.GetComponent<TMP_InputField>().text = splitCodeText[editableTextboxesGenerated + uneditableTextboxesGenerated];
+
+                        int lines = UneditableBox.GetComponent<TMP_InputField>().text.Split("\n").Length;
+                        UneditableBox.GetComponent<CodeGenerator>().lines = lines;
+                        UneditableBox.GetComponent<CodeGenerator>().sizeOfPreviousFields = sizeOfPreviousFields;
+                        sizeOfPreviousFields += 23 * lines;
                         uneditableTextboxesGenerated++;
                     }
+                    totalBoxes--;
                 }
             }
         }

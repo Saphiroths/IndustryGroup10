@@ -1,0 +1,64 @@
+name: Granny's Cookie Store
+description: Order cookies from Granny's Store
+defaultPage: Order Form
+
+resources:
+  order:
+    roles:
+      - $public
+    schema:
+      type: object
+      additionalProperties: false
+      required:
+        - customerName
+        - typeOfCookies
+        - amountOfCookies
+      properties:
+        customerName:
+          type: string
+        typeOfCookies:
+          type: string
+        amountOfCookies:
+          type: number
+        extraNotes:
+          type: string
+
+pages:
+ - name: Order Form
+    blocks:
+//switch
+      - type: form
+        version: 0.20.7
+//switch
+        actions:
+          onSubmit:
+            type: resource.create
+            resource: order
+            remap: { null.strip }
+            onSuccess:
+              type: link
+              to: Orders
+        parameters:
+          fields:
+            - label: Name
+              name: customerName
+              type: string
+              requirements: [ { required: true } ]
+            - label: Types of Cookies
+//switch
+              name: typeOfCookies
+              type: string
+              requirements: [ { required: true } ]
+//switch
+            - label: Number of Cookies
+//switch
+              name: amountOfCookies
+              type: number
+//switch
+              requirements: [ { required: true } ]
+            - label: Extra Notes
+              name: extraNotes
+              type: string
+//switch
+              requirements: [ { required: false }]
+//switch
