@@ -12,6 +12,8 @@ public class YAMLGenerator : MonoBehaviour
     [SerializeField] GameObject EditableTextboxPrefab;
     [SerializeField] int Level = 1;
 
+    private List<TMP_InputField> inputFields = new List<TMP_InputField>();
+    private string finalYAML;
     private int editableTextboxesGenerated = 0;
     private int uneditableTextboxesGenerated = 0;
     private float sizeOfPreviousFields = 0;
@@ -28,16 +30,8 @@ public class YAMLGenerator : MonoBehaviour
         StartCoroutine(nameof(GenerateTextboxesUneditableFirst));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator GenerateTextboxesUneditableFirst()
     {
-        //try
-        //{
         while (!(editableTextboxesGenerated == numberOfEditableTextboxes && uneditableTextboxesGenerated == numberOfUneditableTextboxes))
         {
             if (startWithUneditableTextbox)
@@ -54,6 +48,7 @@ public class YAMLGenerator : MonoBehaviour
                         UneditableBox.GetComponent<CodeGenerator>().sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
                         uneditableTextboxesGenerated++;
+                        inputFields.Add(UneditableBox.GetComponent<TMP_InputField>());
                     }
 
                     if (editableTextboxesGenerated != numberOfEditableTextboxes)
@@ -66,9 +61,11 @@ public class YAMLGenerator : MonoBehaviour
                         sizeOfPreviousFields += 23 * lines;
 
                         editableTextboxesGenerated++;
+                        inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
                     }
                     totalBoxes--;
                 }
+                yield return null;
             }
             else
             {
@@ -84,6 +81,7 @@ public class YAMLGenerator : MonoBehaviour
                         sizeOfPreviousFields += 23 * lines;
 
                         editableTextboxesGenerated++;
+                        inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
                     }
                     if (uneditableTextboxesGenerated != numberOfUneditableTextboxes)
                     {
@@ -95,17 +93,23 @@ public class YAMLGenerator : MonoBehaviour
                         UneditableBox.GetComponent<CodeGenerator>().sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
                         uneditableTextboxesGenerated++;
+                        inputFields.Add(UneditableBox.GetComponent<TMP_InputField>());
                     }
                     totalBoxes--;
                 }
+                yield return null;
             }
         }
-        //}
-        //catch
-        //{
+    }
 
-        //}
+    //Deze methode haalt alle text op en returned ze als een string
+    public string SubmitAnswer()
+    {
+        foreach(TMP_InputField input in inputFields)
+        {
+            finalYAML += input.text;
+        }
 
-        yield return null;
+        return finalYAML;
     }
 }
