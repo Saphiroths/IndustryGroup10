@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: ae747f8e79379c74fb839d286886e00e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 662918697830708847
+    second: skeletonfire-export_0
+  - first:
+      213: 8839986223078550561
+    second: skeletonfire-export_1
+  - first:
+      213: -7895431033209897703
+    second: skeletonfire-export_2
+  - first:
+      213: -279421520722890930
+    second: skeletonfire-export_3
+  - first:
+      213: -7276725958408081159
+    second: skeletonfire-export_4
+  - first:
+      213: -1226153052553372086
+    second: skeletonfire-export_5
+  - first:
+      213: 6556330830169305589
+    second: skeletonfire-export_6
+  - first:
+      213: -3106317200327089061
+    second: skeletonfire-export_7
+  - first:
+      213: -922706060827147540
+    second: skeletonfire-export_8
+  - first:
+      213: -2810199150511682877
+    second: skeletonfire-export_9
+  - first:
+      213: -1100911021156534553
+    second: skeletonfire-export_10
+  - first:
+      213: -6938855012133766703
+    second: skeletonfire-export_11
+  - first:
+      213: 5440792439647842625
+    second: skeletonfire-export_12
+  - first:
+      213: -97434221652993405
+    second: skeletonfire-export_13
+  - first:
+      213: 6306594528997870487
+    second: skeletonfire-export_14
+  - first:
+      213: 6208563519469905370
+    second: skeletonfire-export_15
+  - first:
+      213: 905887193975968275
+    second: skeletonfire-export_16
+  - first:
+      213: -809690808128007351
+    second: skeletonfire-export_17
+  - first:
+      213: 3124902741627217383
+    second: skeletonfire-export_18
+  - first:
+      213: 1194445262055242406
+    second: skeletonfire-export_19
+  - first:
+      213: 5915519665331222088
+    second: skeletonfire-export_20
+  - first:
+      213: -4629113413336619455
+    second: skeletonfire-export_25
+  - first:
+      213: 6863227374970705255
+    second: skeletonfire-export_27
+  - first:
+      213: -8033601373204523786
+    second: skeletonfire-export_29
+  - first:
+      213: 5406912028177618055
+    second: skeletonfire-export_32
+  - first:
+      213: -6234248752396970000
+    second: skeletonfire-export_42
+  - first:
+      213: -8937289990717445708
+    second: skeletonfire-export_61
+  - first:
+      213: -2073095815117196127
+    second: skeletonfire-export_71
+  - first:
+      213: 439611893287888335
+    second: skeletonfire-export_72
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skeletonfire-export_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 2112
+        width: 123
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66f92b1b09233900800000000000000
+      internalID: 662918697830708847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_1
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2112
+        width: 140
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ca1f532a0fdaa70800000000000000
+      internalID: 8839986223078550561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_2
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 2112
+        width: 150
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dbdec9e4bcd6290800000000000000
+      internalID: -7895431033209897703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_5
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 2112
+        width: 145
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e9b4e8b44dbfee0800000000000000
+      internalID: -1226153052553372086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_7
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 2112
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5461dad6f424e4d0800000000000000
+      internalID: -3106317200327089061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_9
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 2112
+        width: 133
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca85adf2ca2009d0800000000000000
+      internalID: -2810199150511682877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1599
+        width: 114
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5a550bc72ed5b20800000000000000
+      internalID: 3124902741627217383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_19
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1599
+        width: 114
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa737c23a5839010800000000000000
+      internalID: 1194445262055242406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_20
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1599
+        width: 132
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846b7e93bc5281250800000000000000
+      internalID: 5915519665331222088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_25
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 1599
+        width: 123
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146231d60e512cfb0800000000000000
+      internalID: -4629113413336619455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_27
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1599
+        width: 139
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7659dd14fe41f3f50800000000000000
+      internalID: 6863227374970705255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_29
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 1599
+        width: 123
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4dd0b6d1ae28090800000000000000
+      internalID: -8033601373204523786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_32
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1064
+        width: 140
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7845053b7d5390b40800000000000000
+      internalID: 5406912028177618055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_42
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 1071
+        width: 219
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7d4f74acf7b79a0800000000000000
+      internalID: -6234248752396970000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_61
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1071
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9e1a0fa1e58f380800000000000000
+      internalID: -8937289990717445708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_71
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 1071
+        width: 210
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a437920752ea33e0800000000000000
+      internalID: -2073095815117196127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeletonfire-export_72
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1072
+        width: 236
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5267210b0d91600800000000000000
+      internalID: 439611893287888335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      skeletonfire-export_25: -4629113413336619455
+      skeletonfire-export_72: 439611893287888335
+      skeletonfire-export_9: -2810199150511682877
+      skeletonfire-export_5: -1226153052553372086
+      skeletonfire-export_61: -8937289990717445708
+      skeletonfire-export_19: 1194445262055242406
+      skeletonfire-export_71: -2073095815117196127
+      skeletonfire-export_32: 5406912028177618055
+      skeletonfire-export_18: 3124902741627217383
+      skeletonfire-export_42: -6234248752396970000
+      skeletonfire-export_1: 8839986223078550561
+      skeletonfire-export_29: -8033601373204523786
+      skeletonfire-export_7: -3106317200327089061
+      skeletonfire-export_0: 662918697830708847
+      skeletonfire-export_20: 5915519665331222088
+      skeletonfire-export_27: 6863227374970705255
+      skeletonfire-export_2: -7895431033209897703
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
