@@ -9,17 +9,20 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer _renderer;
     public Camera cam;
-    //public Animator anim;
+    public Animator anim;
 
 
     //Player Variables
     [Header("Variables")]
     public float moveSpeed;
     public float baseMoveSpeed = 5f;
+    public bool m_FacingRight;
 
     //Vectors
     [Header("Vectors")]
     public Vector2 movement;
+    public Vector2 mousePos;
+    public Vector3 lastMoveDir;
 
     private void OnEnable()
     {
@@ -30,6 +33,16 @@ public class Movement : MonoBehaviour
         {
             Debug.LogError("No Sprite");
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
