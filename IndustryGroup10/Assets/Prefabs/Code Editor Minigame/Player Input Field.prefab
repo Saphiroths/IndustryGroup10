@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 3099569953679837931}
   - component: {fileID: 3099569953679837928}
   m_Layer: 5
-  m_Name: Player Input
+  m_Name: Player Input Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

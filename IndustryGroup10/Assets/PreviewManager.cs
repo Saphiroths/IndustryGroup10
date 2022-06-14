@@ -41,7 +41,7 @@ pages:
         ));*/
     }
 
-    public IEnumerator PatchCode(string uri, string code, string coreStyle, string sharedStyle)
+    public IEnumerator PatchCode(string code, string coreStyle, string sharedStyle)
     {
         Debug.Log("Patching new code");
         var data = new List<IMultipartFormSection>
@@ -58,7 +58,7 @@ pages:
         request.SetRequestHeader("Content-Type",
             "multipart/form-data; boundary=\"" + System.Text.Encoding.UTF8.GetString(boundary) + "\"");
         request.SetRequestHeader("Authorization",
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwcHNlbWJsZS5hcHAiLCJpYXQiOjE2NTM0ODA0MTQsImlzcyI6Imh0dHBzOi8vYXBwc2VtYmxlLmFwcCIsInN1YiI6ImNmZTZmNDMzLWI2M2ItNGQ0Yy04ZDcwLTFiZWQwMDQwYjBiOSIsImV4cCI6MTY1MzQ4NDAxNH0.8Ukokk89KFxQE-yd9dh1wfU_CCxj7VlwEhkKkvHV4Y0");
+            $"Bearer {token}");
 
         request.uploadHandler = new UploadHandlerRaw(formSections);
         request.downloadHandler = new DownloadHandlerBuffer();
