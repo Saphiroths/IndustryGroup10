@@ -11,6 +11,7 @@ public class YAMLGenerator : MonoBehaviour
     [SerializeField] GameObject UneditableTextboxPrefab;
     [SerializeField] GameObject EditableTextboxPrefab;
     [SerializeField] int Level = 1;
+    [SerializeField] PreviewManager preview;
 
     private List<TMP_InputField> inputFields = new List<TMP_InputField>();
     private string finalYAML;
@@ -102,14 +103,13 @@ public class YAMLGenerator : MonoBehaviour
         }
     }
 
-    //Deze methode haalt alle text op en returned ze als een string
-    public string SubmitAnswer()
+    public void SubmitAnswer()
     {
         foreach(TMP_InputField input in inputFields)
         {
             finalYAML += input.text;
         }
 
-        return finalYAML;
+        StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
     }
 }
