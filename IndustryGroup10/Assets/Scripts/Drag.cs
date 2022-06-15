@@ -14,6 +14,9 @@ public class Drag : MonoBehaviour
 
     private Vector3 resetPos;
 
+    [SerializeField]
+    private float SnapMargin = 1.5f;
+
 
     // Start is called before the first frame update
     // Sets the starting position as resetposition.
@@ -58,8 +61,8 @@ public class Drag : MonoBehaviour
     {
         moving = false;
 
-        if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1.5f && 
-            Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 1.5f) //Checks if the x and y position is in the margin to snap to its correct position
+        if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= SnapMargin && 
+            Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= SnapMargin) //Checks if the x and y position is in the margin to snap to its correct position
         {
             this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z); //Snap the object to the correct position
             finish = true; //Finish is true so object can not be moved again

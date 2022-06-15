@@ -61,4 +61,3 @@ pages:
               type: string
 //switch
               requirements: [ { required: false }]
-//switch

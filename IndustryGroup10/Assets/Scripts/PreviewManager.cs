@@ -15,13 +15,13 @@ public class PreviewManager : MonoBehaviour
     private RawImage image;
 
     private string uri =
-        "https://shot.screenshotapi.net/screenshot?&url=https%3A%2F%2Faaaa.aaaa.appsemble.app%2Fen%2Fexample-page-a&width=360&height=600&output=image&file_type=png&wait_for_event=load";
+        "https://shot.screenshotapi.net/screenshot?&url=https%3A%2F%2Faaaa.aaaa.appsemble.app%2Fen%2Fexample-page-a&width=950&height=950&output=image&file_type=png&wait_for_event=load&delay=3500";
 
     void Awake()
     {
         image = GetComponentInChildren<RawImage>();
         image.color = new Color(1, 1, 1);
-        //loadingTexture.enabled = false;
+        loadingTexture.enabled = false;
         StartCoroutine(RefreshPreview(uri));
         /*StartCoroutine(PatchCode(
             @"name: aaaa
