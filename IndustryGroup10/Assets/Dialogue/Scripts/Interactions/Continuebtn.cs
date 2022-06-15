@@ -6,17 +6,10 @@ public class Continuebtn : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI npcName;
     [SerializeField] TextMeshProUGUI text;
-    //[SerializeField] public GameObject interactTarget;
     public NpcDialogue dialog;
     public GameObject npc;
-    private int count;
+    public int count;
   
-    /* void Start()
-     {
-         dialog = interactTarget.GetComponent<NpcDialogue>();
-         ContinueButton();
-     }*/
-
     //zet alle waardes weer op nul
     public void Resetter()
     {
@@ -28,14 +21,6 @@ public class Continuebtn : MonoBehaviour
     //Bij deze methode klik je op een "continue" button. Iedere keer als je op deze button klikt willen we de volgende zin uit dialog.sentences aanroepen.
     public void ContinueButton()
     {
-        //zolang dialog.sentences.count kleiner of gelijk is aan count, 
-        //if (dialog.sentences.Count <= count)
-        //{
-        //    text.text = dialog.sentences[count];
-        //    count++;
-        //    return;
-        //}
-
         //als count groter is dan het aantal zinnen, close de dialogue.
         if (count >= dialog.sentences.Count)
         {
@@ -45,12 +30,10 @@ public class Continuebtn : MonoBehaviour
         }
         text.text = dialog.sentences[count];
         count++;
-
-        //GetComponentInChildren<Interact>().dialogueGameobject.SetActive(false);
     }
         
 
-private void OnEnable()
+    private void OnEnable()
     {
         npcName.text = dialog.npcName;
         text.text = dialog.sentences[0];
