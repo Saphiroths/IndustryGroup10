@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using System.Linq;
 
 public class YAMLGenerator : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class YAMLGenerator : MonoBehaviour
     private float sizeOfPreviousFields = 0;
     private string[] splitCodeText;
     private int totalBoxes;
+    private bool winCondition = false;
 
     // Start is called before the first frame update
     void Start()
@@ -109,7 +112,35 @@ public class YAMLGenerator : MonoBehaviour
         {
             finalYAML += input.text;
         }
+        CheckFinalAnswer();
+        //StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
+    }
 
-        StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
+    private void CheckFinalAnswer()
+    {
+        for(int i = 0; i < editableTextboxesGenerated; i++)
+        {
+            int j = i;
+
+            if (startWithUneditableTextbox)
+            {
+                j++;
+            }
+
+            string[] inputSeparated = inputFields[j].text.Split('\n');
+            string[] splitCodeSeparated = splitCodeText[j].Split('\n');
+
+            for (int k = 0; k < inputSeparated.Length; k++)
+            {
+                Debug.Log(inputSeparated[k]);
+                Debug.Log(splitCodeSeparated[k]);
+
+                if (string.Compare(splitCodeSeparated[k], inputSeparated[k]) == 0)
+                {
+                }
+            }
+        }
+
+
     }
 }
