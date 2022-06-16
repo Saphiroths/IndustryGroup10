@@ -66,6 +66,8 @@ public class Drag : MonoBehaviour
         {
             this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z); //Snap the object to the correct position
             finish = true; //Finish is true so object can not be moved again
+
+            GameObject.Find("PointHandler").GetComponent<WinScript>().AddPoints();
         }
         else //Else reset localposition to starting position so the object snaps back to original starting position
         {

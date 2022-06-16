@@ -1977,7 +1977,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       animation_fixed_1: 2311290540308361952
-      animation_fixed_80: 5847765655267205708
       animation_fixed_28: 4985109731318451088
       animation_fixed_105: -3028620755787608741
       animation_fixed_37: 1769268655770442886
@@ -2038,15 +2037,16 @@ TextureImporter:
       animation_fixed_63: 6329015160405005274
       animation_fixed_14: -926771140631002389
       animation_fixed_57: 7483060830873485618
+      animation_fixed_80: 5847765655267205708
       animation_fixed_34: 8136674540916929873
       animation_fixed_3: -8032894828149542488
-      animation_fixed_40: 1192277199815318062
       animation_fixed_20: 2956841397192810536
-      animation_fixed_69: -6356146268893122742
+      animation_fixed_40: 1192277199815318062
       animation_fixed_79: 5016921491086784804
+      animation_fixed_69: -6356146268893122742
       animation_fixed_47: -8951787882084762181
-      animation_fixed_31: 1350094454403016842
       animation_fixed_50: -9105281616246486125
+      animation_fixed_31: 1350094454403016842
       animation_fixed_27: 7933276298898538180
       animation_fixed_62: -224625429276539949
       animation_fixed_7: 2003054394673197919
