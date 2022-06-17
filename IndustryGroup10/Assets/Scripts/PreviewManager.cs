@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -12,7 +13,11 @@ public class PreviewManager : MonoBehaviour
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwcHNlbWJsZS5hcHAiLCJpYXQiOjE2NTM0ODA0MTQsImlzcyI6Imh0dHBzOi8vYXBwc2VtYmxlLmFwcCIsInN1YiI6ImNmZTZmNDMzLWI2M2ItNGQ0Yy04ZDcwLTFiZWQwMDQwYjBiOSIsImV4cCI6MTY1MzQ4NDAxNH0.8Ukokk89KFxQE-yd9dh1wfU_CCxj7VlwEhkKkvHV4Y0";
 
     public RawImage loadingTexture;
+    public UnityEvent Compiled = new UnityEvent();
     private RawImage image;
+
+    [SerializeField]
+    private GameObject previewText;
 
     private string uri =
         "https://shot.screenshotapi.net/screenshot?&url=https%3A%2F%2Faaaa.aaaa.appsemble.app%2Fen%2Fexample-page-a&width=950&height=950&output=image&file_type=png&wait_for_event=load&delay=3500";
@@ -22,7 +27,7 @@ public class PreviewManager : MonoBehaviour
         image = GetComponentInChildren<RawImage>();
         image.color = new Color(1, 1, 1);
         loadingTexture.enabled = false;
-        StartCoroutine(RefreshPreview(uri));
+        //StartCoroutine(RefreshPreview(uri));
         /*StartCoroutine(PatchCode(
             @"name: aaaa
 description: Hello whats up
@@ -68,17 +73,21 @@ pages:
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log("Patched new code! Refreshing preview.");
+                Compiled.Invoke();
                 StartCoroutine(RefreshPreview(uri));
                 break;
             default:
                 Debug.Log(request.error);
                 Debug.Log(request.downloadHandler.error);
+                previewText.GetComponent<TMPro.TextMeshProUGUI>().text = "There was an error. Please check your code.";
+                previewText.SetActive(true);
                 break;
         }
     }
 
     private IEnumerator RefreshPreview(string uri)
     {
+        previewText.SetActive(false);
         loadingTexture.enabled = true;
         using UnityWebRequest request = UnityWebRequestTexture.GetTexture(uri);
         yield return request.SendWebRequest();
@@ -90,7 +99,6 @@ pages:
                 var texture = DownloadHandlerTexture.GetContent(request);
                 if (texture == null)
                     throw new InvalidOperationException();
-
                 image.texture = texture;
                 Debug.Log("Updated preview!");
                 break;

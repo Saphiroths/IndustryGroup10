@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class YAMLGenerator : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class YAMLGenerator : MonoBehaviour
     [SerializeField] GameObject EditableTextboxPrefab;
     [SerializeField] int Level = 1;
     [SerializeField] PreviewManager preview;
+    [SerializeField] FinishLevel finishLevel;
 
     private List<TMP_InputField> inputFields = new List<TMP_InputField>();
     private string finalYAML;
@@ -27,6 +31,7 @@ public class YAMLGenerator : MonoBehaviour
         TextAsset text = Resources.Load($"Level Code/YAMLLevel{Level}", typeof(TextAsset)) as TextAsset;
         splitCodeText = text.text.Split("//switch");
         totalBoxes = numberOfEditableTextboxes + numberOfUneditableTextboxes;
+        preview.Compiled.AddListener(CheckFinalAnswer);
 
         StartCoroutine(nameof(GenerateTextboxesUneditableFirst));
     }
@@ -60,6 +65,7 @@ public class YAMLGenerator : MonoBehaviour
                         input.lines = lines;
                         input.sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
+                        input.finishLevel = finishLevel;
 
                         editableTextboxesGenerated++;
                         inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
@@ -80,6 +86,7 @@ public class YAMLGenerator : MonoBehaviour
                         input.lines = lines;
                         input.sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
+                        input.finishLevel = finishLevel;
 
                         editableTextboxesGenerated++;
                         inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
@@ -109,7 +116,25 @@ public class YAMLGenerator : MonoBehaviour
         {
             finalYAML += input.text;
         }
-
+        //CheckFinalAnswer();
         StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
+    }
+
+    private void CheckFinalAnswer()
+    {
+        finalYAML = Regex.Replace(finalYAML, " |\r\n", "");
+        string correctAnswer = "";
+
+        foreach(string text in splitCodeText)
+        {
+            correctAnswer += text;
+        }
+
+        correctAnswer = Regex.Replace(correctAnswer, " |\r\n", "");
+
+        if(string.Compare(finalYAML, correctAnswer) == 0)
+        {
+            finishLevel.EmitWinEvent();
+        }
     }
 }

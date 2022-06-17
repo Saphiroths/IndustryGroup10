@@ -1,6 +1,6 @@
 name: Granny's Cookie Store
 description: Order cookies from Granny's Store
-defaultPage: Order Form
+defaultPage: Orders
 
 resources:
   order:
@@ -24,39 +24,65 @@ resources:
           type: string
 
 pages:
- - name: Order Form
-   blocks:
+  - name: Orders
+    blocks:
 //switch
-      - type: form
+      - type: data-loader
         version: 0.20.7
 //switch
+        actions:
+          onLoad:
+            type: resource.query
+            resource: order
+        events:
+          emit:
+            data: data
+//switch
+      - type: table
+        version: 0.20.7
+        parameters:
+          fields:
+//switch
+            - value: { prop: customerName }
+              label: Customer Name
+            - value: { prop: typeOfCookies }
+              label: Type of Cookies
+            - value: { prop: amountOfCookies }
+              label: Amount of Cookies
+        events:
+          listen:
+            data: data
+
+
+ - name: Order Form
+   blocks:
+      - type: form
+        version: 0.20.7
         actions:
           onSubmit:
             type: resource.create
             resource: order
             remap: { null.strip }
             onSuccess:
-              type: dialog.ok
+//switch
+              type: link
+              to: Orders
         parameters:
           fields:
+//switch
             - label: Name
               name: customerName
               type: string
               requirements: [ { required: true } ]
             - label: Types of Cookies
-//switch
               name: typeOfCookies
               type: string
               requirements: [ { required: true } ]
-//switch
             - label: Number of Cookies
-//switch
               name: amountOfCookies
               type: number
-//switch
               requirements: [ { required: true } ]
             - label: Extra Notes
               name: extraNotes
               type: string
-//switch
               requirements: [ { required: false }]
