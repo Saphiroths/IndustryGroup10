@@ -11,6 +11,7 @@ public class PlayerYAMLInput : MonoBehaviour
     public float sizeOfPreviousFields = 0;
     public int lines;
     public int size;
+    public FinishLevel finishLevel;
     [SerializeField] TextMeshProUGUI input;
     [SerializeField] TMP_InputField inputField;
     private RectTransform rtransform;
@@ -23,5 +24,11 @@ public class PlayerYAMLInput : MonoBehaviour
         //correctly sets the size and position of the player text input field
         rtransform.sizeDelta = new Vector2(rtransform.sizeDelta.x, lineSize * lines);
         rtransform.anchoredPosition = new Vector2(0, (-(rtransform.sizeDelta.y) / 2) - sizeOfPreviousFields);
+        finishLevel.WinConditionsMet.AddListener(LevelFinished);
+    }
+
+    private void LevelFinished()
+    {
+        inputField.interactable = false;
     }
 }

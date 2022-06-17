@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4309555270068797739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -225,6 +225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwcHNlbWJsZS5hcHAiLCJpYXQiOjE2NTM0ODA0MTQsImlzcyI6Imh0dHBzOi8vYXBwc2VtYmxlLmFwcCIsInN1YiI6ImNmZTZmNDMzLWI2M2ItNGQ0Yy04ZDcwLTFiZWQwMDQwYjBiOSIsImV4cCI6MTY1MzQ4NDAxNH0.8Ukokk89KFxQE-yd9dh1wfU_CCxj7VlwEhkKkvHV4Y0
   loadingTexture: {fileID: 3931802846354952149}
+  Compiled:
+    m_PersistentCalls:
+      m_Calls: []
   previewText: {fileID: 1208069581}
 --- !u!1 &4999467537664254629
 GameObject:
@@ -352,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3236440169667126656
 Transform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 public class YAMLGenerator : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class YAMLGenerator : MonoBehaviour
     [SerializeField] GameObject EditableTextboxPrefab;
     [SerializeField] int Level = 1;
     [SerializeField] PreviewManager preview;
+    [SerializeField] FinishLevel finishLevel;
 
     private List<TMP_InputField> inputFields = new List<TMP_InputField>();
     private string finalYAML;
@@ -22,7 +24,6 @@ public class YAMLGenerator : MonoBehaviour
     private float sizeOfPreviousFields = 0;
     private string[] splitCodeText;
     private int totalBoxes;
-    private bool winCondition = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class YAMLGenerator : MonoBehaviour
         TextAsset text = Resources.Load($"Level Code/YAMLLevel{Level}", typeof(TextAsset)) as TextAsset;
         splitCodeText = text.text.Split("//switch");
         totalBoxes = numberOfEditableTextboxes + numberOfUneditableTextboxes;
+        preview.Compiled.AddListener(CheckFinalAnswer);
 
         StartCoroutine(nameof(GenerateTextboxesUneditableFirst));
     }
@@ -63,6 +65,7 @@ public class YAMLGenerator : MonoBehaviour
                         input.lines = lines;
                         input.sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
+                        input.finishLevel = finishLevel;
 
                         editableTextboxesGenerated++;
                         inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
@@ -83,6 +86,7 @@ public class YAMLGenerator : MonoBehaviour
                         input.lines = lines;
                         input.sizeOfPreviousFields = sizeOfPreviousFields;
                         sizeOfPreviousFields += 23 * lines;
+                        input.finishLevel = finishLevel;
 
                         editableTextboxesGenerated++;
                         inputFields.Add(EditableBox.GetComponent<TMP_InputField>());
@@ -112,35 +116,25 @@ public class YAMLGenerator : MonoBehaviour
         {
             finalYAML += input.text;
         }
-        CheckFinalAnswer();
-        //StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
+        //CheckFinalAnswer();
+        StartCoroutine(preview.PatchCode(finalYAML, " ", " "));
     }
 
     private void CheckFinalAnswer()
     {
-        for(int i = 0; i < editableTextboxesGenerated; i++)
+        finalYAML = Regex.Replace(finalYAML, " |\r\n", "");
+        string correctAnswer = "";
+
+        foreach(string text in splitCodeText)
         {
-            int j = i;
-
-            if (startWithUneditableTextbox)
-            {
-                j++;
-            }
-
-            string[] inputSeparated = inputFields[j].text.Split('\n');
-            string[] splitCodeSeparated = splitCodeText[j].Split('\n');
-
-            for (int k = 0; k < inputSeparated.Length; k++)
-            {
-                Debug.Log(inputSeparated[k]);
-                Debug.Log(splitCodeSeparated[k]);
-
-                if (string.Compare(splitCodeSeparated[k], inputSeparated[k]) == 0)
-                {
-                }
-            }
+            correctAnswer += text;
         }
 
+        correctAnswer = Regex.Replace(correctAnswer, " |\r\n", "");
 
+        if(string.Compare(finalYAML, correctAnswer) == 0)
+        {
+            finishLevel.EmitWinEvent();
+        }
     }
 }
