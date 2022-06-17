@@ -1671,6 +1671,18 @@ PrefabInstance:
       propertyPath: finishLevel
       value: 
       objectReference: {fileID: 810262034}
+    - target: {fileID: 1679769258853503369, guid: 07d3dd7989ec9e94a9f8ca328a8c5bec, type: 3}
+      propertyPath: numberOfEditableTextboxes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679769258853503369, guid: 07d3dd7989ec9e94a9f8ca328a8c5bec, type: 3}
+      propertyPath: startWithUneditableTextbox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679769258853503369, guid: 07d3dd7989ec9e94a9f8ca328a8c5bec, type: 3}
+      propertyPath: numberOfUneditableTextboxes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8025925378090487029, guid: 07d3dd7989ec9e94a9f8ca328a8c5bec, type: 3}
       propertyPath: m_Name
       value: Code Editor Parent

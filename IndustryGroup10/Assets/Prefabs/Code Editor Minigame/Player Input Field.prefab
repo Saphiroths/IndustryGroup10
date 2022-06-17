@@ -403,6 +403,7 @@ MonoBehaviour:
   sizeOfPreviousFields: 0
   lines: 0
   size: 0
+  finishLevel: {fileID: 0}
   input: {fileID: 3099569953687887686}
   inputField: {fileID: 3099569953679837931}
 --- !u!1 &3099569953687887680
