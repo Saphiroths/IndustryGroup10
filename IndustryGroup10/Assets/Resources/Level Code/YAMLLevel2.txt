@@ -50,8 +50,8 @@ pages:
               requirements: [ { required: true } ]
 //switch
             - label: Number of Cookies
-//switch
               name: amountOfCookies
+//switch
               type: number
 //switch
               requirements: [ { required: true } ]
