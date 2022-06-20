@@ -9,7 +9,6 @@ public class IntroSequence : MonoBehaviour
     public GameObject robObject;
     public GameObject DialogueObject;
     public Camera cameraReference;
-    public GameObject arrowObject;
 
     Vector2 originalPosition;
 

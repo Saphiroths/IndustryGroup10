@@ -6,6 +6,7 @@ public class Interact : MonoBehaviour
     public TextMeshProUGUI nametext;
     public TextMeshProUGUI dialogue;
     public GameObject interactTarget;
+    public bool hasSceneSwitch;
     [SerializeField] public GameObject dialogueGameobject;
 
 

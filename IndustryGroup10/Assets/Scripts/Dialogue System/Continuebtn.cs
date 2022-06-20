@@ -25,7 +25,11 @@ public class Continuebtn : MonoBehaviour
         if (count >= dialog.sentences.Count)
         {
             GameObject.FindGameObjectWithTag("Dialogue").gameObject.SetActive(false);
-            npc.GetComponent<SceneSwitch>().SwitchScene();
+            if(npc.GetComponent<Interact>().hasSceneSwitch == true)
+            {
+                npc.GetComponent<SceneSwitch>().SwitchScene();
+            }
+            
             return;
         }
         text.text = dialog.sentences[count];
