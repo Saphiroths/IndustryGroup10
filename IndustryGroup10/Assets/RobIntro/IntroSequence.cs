@@ -9,6 +9,7 @@ public class IntroSequence : MonoBehaviour
     public GameObject robObject;
     public GameObject DialogueObject;
     public Camera cameraReference;
+    public GameObject arrowObject;
 
     Vector2 originalPosition;
 
@@ -43,7 +44,7 @@ public class IntroSequence : MonoBehaviour
             
             StartCoroutine(openCoroutine);
         }
-        if (DialogueObject.GetComponent<Continuebtn>().count == 6)
+        if (DialogueObject.GetComponent<Continuebtn>().count == 7)
         {
             StopAllCoroutines();
             GetComponent<Camera>().orthographicSize = 10;
