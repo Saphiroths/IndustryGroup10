@@ -24,9 +24,5 @@ public class Interact : MonoBehaviour
 
         //je zet je dialog op actief
         dialogueGameobject.SetActive(true);
-
-        /*
-        dialogue.text = interactTarget.GetComponent<NpcDialogue>().sentences[0];
-        nametext.text = interactTarget.GetComponent<NpcDialogue>().npcName;*/
     }
 }
