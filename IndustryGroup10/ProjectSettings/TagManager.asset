@@ -42,6 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Behind Player
+    uniqueID: 837706309
+    locked: 0
+  - name: Player
+    uniqueID: 1287414315
+    locked: 0
+  - name: Before Player
+    uniqueID: 9754173
+    locked: 0
   - name: NeedFill
     uniqueID: 872335245
     locked: 0
