@@ -9,6 +9,7 @@ public class DragDropStory : MonoBehaviour
     public GameObject robObject;
     public GameObject DialogueObject;
     public GameObject ManualObject;
+    public GameObject BackgroundObject;
 
 
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class DragDropStory : MonoBehaviour
         if (DialogueObject.GetComponent<Continuebtn>().count == 3)
         {
             ManualObject.SetActive(true);
+            BackgroundObject.SetActive(true);
             cameraTransform.position = new Vector3(-1.36f, 1.18f, -10);
         }
     }
