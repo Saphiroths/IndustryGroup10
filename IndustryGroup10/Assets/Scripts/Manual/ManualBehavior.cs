@@ -24,7 +24,7 @@ public class ManualBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && inAnimation == false)  //Detects tab placement + failsafe no animations are running
+        if (Input.GetKeyDown(KeyCode.LeftControl) && inAnimation == false)  //Detects tab placement + failsafe no animations are running
         {
             if(isOpen == false)                                     //Looks if the sidebar is opened or closed
             {

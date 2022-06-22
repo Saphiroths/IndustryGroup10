@@ -28,8 +28,8 @@ pages:
    blocks:
 //switch
       - type: form
-        version: 0.20.7
 //switch
+        version: 0.20.7
         actions:
           onSubmit:
             type: resource.create
@@ -44,11 +44,9 @@ pages:
               type: string
               requirements: [ { required: true } ]
             - label: Types of Cookies
-//switch
               name: typeOfCookies
               type: string
               requirements: [ { required: true } ]
-//switch
             - label: Number of Cookies
               name: amountOfCookies
 //switch
@@ -58,5 +56,4 @@ pages:
             - label: Extra Notes
               name: extraNotes
               type: string
-//switch
               requirements: [ { required: false }]
