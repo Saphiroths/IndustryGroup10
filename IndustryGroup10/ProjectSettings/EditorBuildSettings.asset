@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/RobIntro/RobIntro.unity
     guid: 148980a2459f30c45af381a0fbfb3228
   - enabled: 1
-    path: Assets/Scenes/MapScene(1).unity
+    path: Assets/Scenes/First overworld.unity
     guid: 3e43bcd8e8bffc04d9b27cae0b1c04af
   - enabled: 1
     path: Assets/Scenes/Drag&Drop.unity
     guid: e470afe3237ad9749b930b2c00eb2ff2
   - enabled: 1
-    path: Assets/Scenes/MapScene(2) 1.unity
+    path: Assets/Scenes/Second overworld.unity
     guid: 60f8dae296d58d643922509cb661e576
   - enabled: 1
     path: Assets/Scenes/Granny Minigame 2.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Drag&Drop 1.unity
     guid: a27a8df9246a0064da2ea5b72d27e621
+  - enabled: 1
+    path: Assets/Scenes/Granny Minigame 1.unity
+    guid: 2d1ca7be3544caa46b9651c27f3809f4
   m_configObjects: {}
